@@ -4,15 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.2185" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.2185" />
         <entry key="app/src/main/res/drawable/ic_guide.xml" value="0.2185" />
+        <entry key="app/src/main/res/drawable/ic_health.xml" value="0.2185" />
         <entry key="app/src/main/res/drawable/ic_home_background.xml" value="0.2185" />
         <entry key="app/src/main/res/drawable/ic_lansia_background.xml" value="0.2185" />
+        <entry key="app/src/main/res/drawable/ic_pic.xml" value="0.2185" />
         <entry key="app/src/main/res/drawable/ic_profile_background.xml" value="0.2185" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.4101638793945313" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2562316894531249" />
         <entry key="app/src/main/res/layout/activity_notification.xml" value="0.2644927536231884" />
         <entry key="app/src/main/res/layout/fragment_family_notif.xml" value="0.2644927536231884" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="app/src/main/res/layout/fragment_guide.xml" value="0.2644927536231884" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.24080657958984372" />
         <entry key="app/src/main/res/layout/fragment_lansia_list.xml" value="0.295843505859375" />
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.26490936279296873" />
         <entry key="app/src/main/res/layout/fragment_pasien_list.xml" value="0.19270833333333334" />

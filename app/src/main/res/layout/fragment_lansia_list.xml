@@ -65,7 +65,7 @@
                         android:layout_height="80dp"
                         android:layout_margin="8dp"
                         android:layout_weight="1"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/ic_pic" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -98,7 +98,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:layout_margin="8dp"
+                                android:layout_margin="4dp"
                                 android:text="Riwayat"
                                 android:backgroundTint="@color/main_theme" />
 
@@ -107,7 +107,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:layout_margin="8dp"
+                                android:layout_margin="4dp"
                                 android:text="Rekam Medis"
                                 android:backgroundTint="@color/main_theme" />
                         </LinearLayout>
@@ -131,7 +131,7 @@
                         android:layout_height="80dp"
                         android:layout_margin="8dp"
                         android:layout_weight="1"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/ic_pic" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -164,7 +164,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:layout_margin="8dp"
+                                android:layout_margin="4dp"
                                 android:text="Riwayat"
                                 android:backgroundTint="@color/main_theme" />
 
@@ -173,7 +173,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:layout_margin="8dp"
+                                android:layout_margin="4dp"
                                 android:text="Rekam Medis"
                                 android:backgroundTint="@color/main_theme" />
                         </LinearLayout>
@@ -196,7 +196,7 @@
                         android:layout_height="80dp"
                         android:layout_margin="8dp"
                         android:layout_weight="1"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:src="@drawable/ic_pic" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -229,7 +229,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:layout_margin="8dp"
+                                android:layout_margin="4dp"
                                 android:text="Riwayat"
                                 android:backgroundTint="@color/main_theme" />
 
@@ -238,7 +238,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:layout_margin="8dp"
+                                android:layout_margin="4dp"
                                 android:text="Rekam Medis"
                                 android:backgroundTint="@color/main_theme" />
                         </LinearLayout>
@@ -254,8 +254,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/main_theme"
             android:text="+ Tambah Pasien"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_margin="8dp"
             app:layout_constraintTop_toBottomOf="@+id/cardDaftarLansia"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
