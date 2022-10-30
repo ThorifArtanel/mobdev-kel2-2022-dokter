@@ -7,10 +7,23 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.appcompat.widget.Toolbar;
 
 public class FragmentHome extends Fragment{
     public FragmentHome(){
         // require a empty public constructor
+    }
+
+    public static FragmentHome newInstance() {
+        FragmentHome fragment = new FragmentHome();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     // The onCreateView method is called when Fragment should create its View object hierarchy,
@@ -27,5 +40,9 @@ public class FragmentHome extends Fragment{
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
+        Toolbar tb = (Toolbar)   getActivity().findViewById(R.id.toolbar);
+        tb.setNavigationIcon(null);
+        tb.setTitle("Beranda");
     }
+
 }

@@ -3,6 +3,7 @@ package cs.upi.edu.mobdevkel2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,9 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bnv;
-    FragmentHome fragmentHome = new FragmentHome();
-    FragmentLansia fragmentLansia = new FragmentLansia();
-    FragmentGuide fragmentGuide = new FragmentGuide();
+    FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +23,17 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
 
+        fragmentManager = getSupportFragmentManager();
+        if (savedInstanceState == null) {
+            myToolbar.setTitle("Beranda");
+            fragmentManager.beginTransaction()
+                    .add(R.id.fragmentContainerView, FragmentHome.class, null)
+                    .setReorderingAllowed(true)
+                    .addToBackStack(null)
+                    .commit();
+        }
 
         bnv = findViewById(R.id.botNav);
-        bnv.setSelectedItemId(R.id.mHome);
         bnv.setOnItemSelectedListener(
                 new BottomNavigationView.OnItemSelectedListener() {
                     @Override
@@ -34,19 +41,39 @@ public class MainActivity extends AppCompatActivity {
                         int id = item.getItemId();
                         switch (id) {
                             case R.id.mHome:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, fragmentHome).commit();
-                                return true;
+                                fragmentManager.beginTransaction()
+                                        .replace(R.id.fragmentContainerView, FragmentHome.class, null)
+                                        .setReorderingAllowed(true)
+                                        .addToBackStack(null)
+                                        .commit();
+                                break;
                             case R.id.mLansia:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, fragmentLansia).commit();
-                                return true;
+                                fragmentManager.beginTransaction()
+                                        .replace(R.id.fragmentContainerView, FragmentLansia.class, null)
+                                        .setReorderingAllowed(true)
+                                        .addToBackStack(null)
+                                        .commit();
+                                break;
                             case R.id.mGuide:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, fragmentGuide).commit();
-                                return true;
+                                fragmentManager.beginTransaction()
+                                        .replace(R.id.fragmentContainerView, FragmentGuide.class, null)
+                                        .setReorderingAllowed(true)
+                                        .addToBackStack(null)
+                                        .commit();
+                                break;
+                            case R.id.mProfile:
+                                fragmentManager.beginTransaction()
+                                        .replace(R.id.fragmentContainerView, FragmentProfile.class, null)
+                                        .setReorderingAllowed(true)
+                                        .addToBackStack(null)
+                                        .commit();
+                                break;
                         }
 
                         return true;
                     }
                 });
+
     }
 
     @Override
@@ -55,5 +82,22 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_top_bar, menu);
         return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.mNotification:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentNotification.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 }
