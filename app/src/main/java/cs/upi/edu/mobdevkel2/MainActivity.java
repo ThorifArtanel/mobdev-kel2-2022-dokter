@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         bnv = findViewById(R.id.botNav);
+        bnv.setSelectedItemId(R.id.mHome);
         bnv.setOnItemSelectedListener(
                 new BottomNavigationView.OnItemSelectedListener() {
                     @Override

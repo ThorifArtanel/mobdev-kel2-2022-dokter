@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentGuideDetail">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvGuideDetail1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/LinearGuideDetail1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Penanganan Pertama Jatuh"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dr. John Doe"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2022-08-01"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="160dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_fall" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et scelerisque diam. Phasellus in mi venenatis, condimentum diam vitae, blandit quam. Suspendisse urna ante, commodo id ultricies ut, venenatis ac ante. Duis consectetur eros tempus arcu facilisis, quis bibendum ligula tristique. Donec fermentum leo sodales ante cursus lobortis. Suspendisse aliquam tortor sit amet lobortis tempor. Mauris condimentum sed turpis ac ultricies. Nunc congue nulla vitae elementum tincidunt. Nullam ac quam sapien. Praesent fermentum metus sit amet mattis tincidunt. Proin sit amet eros sed mi laoreet gravida. Integer molestie eget erat a aliquam. Nullam tortor tellus, venenatis ut diam vitae, imperdiet hendrerit urna. Maecenas luctus lorem augue, eu finibus nisi sodales eu.\n\nFusce lorem enim, egestas in tincidunt ac, pretium vel magna. Donec ligula turpis, condimentum vel sapien eu, gravida porttitor elit. Quisque et purus libero. In elementum mattis placerat. Donec mattis auctor auctor. Maecenas laoreet orci vel nibh porta, non lobortis dolor dictum. Morbi et nisi congue, sollicitudin neque in, hendrerit est. Cras vitae est ac quam euismod bibendum. Integer vel felis sed purus pulvinar rutrum ut et nisi. Duis et convallis dolor. Aliquam nec turpis mattis diam tincidunt malesuada in eget nulla. Donec quis nisi quis felis porta molestie commodo et neque. Maecenas pretium velit ante, in ullamcorper odio interdum vel. Sed sit amet viverra odio, rhoncus gravida nibh."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:justificationMode="inter_word"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/LinearGuideDetail1"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvGuideDetail1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

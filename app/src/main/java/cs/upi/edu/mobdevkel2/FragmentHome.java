@@ -4,12 +4,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class FragmentHome extends Fragment{
+    BottomNavigationView bnv;
+
     public FragmentHome(){
         // require a empty public constructor
     }
@@ -43,6 +49,49 @@ public class FragmentHome extends Fragment{
         Toolbar tb = (Toolbar)   getActivity().findViewById(R.id.toolbar);
         tb.setNavigationIcon(null);
         tb.setTitle("Beranda");
+
+        LinearLayout btnLansia = (LinearLayout) getActivity().findViewById(R.id.btnHomePasien);
+        btnLansia.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                bnv = getActivity().findViewById(R.id.botNav);
+                bnv.setSelectedItemId(R.id.mLansia);
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentLansia.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        LinearLayout btnGuide = (LinearLayout) getActivity().findViewById(R.id.btnHomeGuide);
+        btnGuide.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                bnv = getActivity().findViewById(R.id.botNav);
+                bnv.setSelectedItemId(R.id.mGuide);
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentGuide.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        // TODO: 31/10/22 Create Help Layout and Implement To Call It
+//        LinearLayout btnHelp = (LinearLayout) getActivity().findViewById(R.id.btnHomeHelp);
+//        btnHelp.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                bnv = getActivity().findViewById(R.id.botNav);
+//                bnv.setSelectedItemId(R.id.mLansia);
+//                getParentFragmentManager().beginTransaction()
+//                        .replace(R.id.fragmentContainerView, FragmentLansia.class, null)
+//                        .setReorderingAllowed(true)
+//                        .addToBackStack(null)
+//                        .commit();
+//            }
+//        });
     }
 
 }

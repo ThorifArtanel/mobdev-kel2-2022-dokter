@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvLansiaRm1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Rekam Medis"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLansiaRm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLansiaRm1" />
+
+        <EditText
+            android:id="@+id/etLansiaRm1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="start|center"
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"
+            android:hint="john.doe@gmail.com"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/content_border"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLansiaRm2" />
+
+        <TextView
+            android:id="@+id/tvLansiaRm3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Upload File"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etLansiaRm1" />
+
+        <LinearLayout
+            android:id="@+id/linearLansiaRm1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLansiaRm3">
+
+            <EditText
+                android:id="@+id/etLansiaRm2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:autofillHints="no"
+                android:background="@drawable/content_border"
+                android:gravity="start|center"
+                android:hint="sample_rm.pdf"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnLansiaRmFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_theme"
+                android:text="Upload File"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etLansiaRm2" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLansiaRmAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/main_theme"
+            android:text="Tambah Rekam Medis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLansiaRm1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

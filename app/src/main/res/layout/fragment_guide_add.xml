@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentGuideAdd">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvGuideAdd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Judul"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etGuideAdd1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="start|center"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:hint="Mencegah Jatuh"
+            android:autofillHints="name"
+            android:background="@drawable/content_border"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGuideAdd1" />
+
+        <TextView
+            android:id="@+id/tvGuideAdd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Tags"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etGuideAdd1"/>
+
+        <EditText
+            android:id="@+id/etGuideAdd2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="start|center"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:hint="Pencegahan, Penanganan"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/content_border"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_margin="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGuideAdd2" />
+
+        <EditText
+            android:id="@+id/etGuideAdd3"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:gravity="start|top"
+            android:textSize="16sp"
+            android:inputType="textMultiLine"
+            android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et scelerisque diam. Phasellus in mi venenatis, condimentum diam vitae, blandit quam. Suspendisse urna ante, commodo id ultricies ut, venenatis ac ante. Duis consectetur eros tempus arcu facilisis, quis bibendum ligula tristique. Donec fermentum leo sodales ante cursus lobortis. Suspendisse aliquam tortor sit amet lobortis tempor. Mauris condimentum sed turpis ac ultricies. Nunc congue nulla vitae elementum tincidunt. Nullam ac quam sapien. Praesent fermentum metus sit amet mattis tincidunt. Proin sit amet eros sed mi laoreet gravida. Integer molestie eget erat a aliquam. Nullam tortor tellus, venenatis ut diam vitae, imperdiet hendrerit urna. Maecenas luctus lorem augue, eu finibus nisi sodales eu.s"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/content_border"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etGuideAdd2" />
+
+        <Button
+            android:id="@+id/btnGuideAdd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/main_theme"
+            android:text="Tambah Guide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etGuideAdd3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

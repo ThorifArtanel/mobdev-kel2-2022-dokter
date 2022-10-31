@@ -12,7 +12,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView1"
+            android:id="@+id/cvGuide1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -21,7 +21,7 @@
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
-            app:layout_constraintBottom_toTopOf="@id/cardView2"
+            app:layout_constraintBottom_toTopOf="@id/cvGuide2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/linearL1"
+                    android:id="@+id/linearGuide1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -45,7 +45,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:id="@+id/imageView1"
+                        android:id="@+id/ivGuide1"
                         android:layout_width="160dp"
                         android:layout_height="80dp"
                         android:layout_margin="8dp"
@@ -59,7 +59,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView1"
+                            android:id="@+id/tvGuide1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Penanganan Pertama Jatuh :"
@@ -68,7 +68,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textView2"
+                            android:id="@+id/tvGuide2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula nunc eu sapien tempor, id dapibus lectus euismod. Suspendisse vitae ex sapien. Interdum et."
@@ -76,15 +76,17 @@
                             android:textSize="14sp" />
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/tvGuide3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
                             android:text="Lihat Selengkapnya"
                             android:textColor="@color/blue_link"
                             android:textSize="12sp" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/tvGuide4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2022-08-01"
@@ -98,8 +100,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView2"
-
+            android:id="@+id/cvGuide2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -108,17 +109,17 @@
             android:layout_marginBottom="16dp"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
-            app:layout_constraintBottom_toTopOf="@id/cardView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardView1">
+            app:layout_constraintTop_toBottomOf="@id/cvGuide1"
+            app:layout_constraintBottom_toTopOf="@id/cvGuide3">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/linearL2"
+                    android:id="@+id/linearGuide2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -133,7 +134,7 @@
                     tools:layout_editor_absoluteX="4dp">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/ivGuide2"
                         android:layout_width="160dp"
                         android:layout_height="80dp"
                         android:layout_margin="8dp"
@@ -147,7 +148,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/tvGuide5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Penanganan Pertama Jatuh :"
@@ -156,7 +157,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/tvGuide6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula nunc eu sapien tempor, id dapibus lectus euismod. Suspendisse vitae ex sapien. Interdum et."
@@ -164,7 +165,7 @@
                             android:textSize="14sp" />
 
                         <TextView
-                            android:id="@+id/textView7"
+                            android:id="@+id/tvGuide7"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lihat Selengkapnya"
@@ -172,7 +173,7 @@
                             android:textSize="12sp" />
 
                         <TextView
-                            android:id="@+id/textView8"
+                            android:id="@+id/tvGuide8"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2022-08-01"
@@ -185,7 +186,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView3"
+            android:id="@+id/cvGuide3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -196,15 +197,15 @@
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardView2"
-            app:layout_constraintBottom_toTopOf="@+id/cardView4">
+            app:layout_constraintTop_toBottomOf="@id/cvGuide2"
+            app:layout_constraintBottom_toTopOf="@+id/cvGuide4">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/linearL3"
+                    android:id="@+id/linearGuide3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -220,7 +221,7 @@
                     tools:layout_editor_absoluteY="16dp">
 
                     <ImageView
-                        android:id="@+id/imageView9"
+                        android:id="@+id/ivGuide9"
                         android:layout_width="160dp"
                         android:layout_height="80dp"
                         android:layout_margin="8dp"
@@ -234,7 +235,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView9"
+                            android:id="@+id/tvGuide9"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Penanganan Pertama Jatuh :"
@@ -243,7 +244,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/tvGuide10"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula nunc eu sapien tempor, id dapibus lectus euismod. Suspendisse vitae ex sapien. Interdum et."
@@ -251,7 +252,7 @@
                             android:textSize="14sp" />
 
                         <TextView
-                            android:id="@+id/textView11"
+                            android:id="@+id/tvGuide11"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lihat Selengkapnya"
@@ -259,7 +260,7 @@
                             android:textSize="12sp" />
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tvGuide12"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2022-08-01"
@@ -272,7 +273,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardView4"
+            android:id="@+id/cvGuide4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -283,15 +284,14 @@
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardView3"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton">
+            app:layout_constraintTop_toBottomOf="@id/cvGuide3">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/linearL4"
+                    android:id="@+id/linearGuide4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -307,7 +307,7 @@
                     tools:layout_editor_absoluteY="16dp">
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/ivGuide"
                         android:layout_width="160dp"
                         android:layout_height="80dp"
                         android:layout_margin="8dp"
@@ -321,7 +321,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView13"
+                            android:id="@+id/tvGuide13"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Penanganan Pertama Jatuh :"
@@ -330,7 +330,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tvGuide14"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula nunc eu sapien tempor, id dapibus lectus euismod. Suspendisse vitae ex sapien. Interdum et."
@@ -338,7 +338,7 @@
                             android:textSize="14sp" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tvGuide15"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lihat Selengkapnya"
@@ -346,7 +346,7 @@
                             android:textSize="12sp" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tvGuide16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="2022-08-01"
@@ -358,25 +358,22 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnGuide1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@null"
-            android:contentDescription="add_button"
-            android:src="@drawable/ic_add_plus"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/main_theme"
+            android:text="+ Tambah Guide"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardView4"
-            app:layout_constraintBottom_toTopOf="@+id/space"/>
+            app:layout_constraintTop_toBottomOf="@+id/cvGuide4" />
 
         <Space
-            android:id="@+id/space"
+            android:id="@+id/spaceGuide1"
             android:layout_width="match_parent"
             android:layout_height="8dp"
-            app:layout_constraintTop_toBottomOf="@id/imageButton"
+            app:layout_constraintTop_toBottomOf="@id/btnGuide1"
             tools:layout_editor_absoluteX="16dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
