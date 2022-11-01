@@ -10,13 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentProfileEdit extends Fragment {
-    public FragmentProfileEdit() {
+public class FragmentHomeHelp extends Fragment {
+    public FragmentHomeHelp() {
         // Required empty public constructor
     }
 
-    public static FragmentProfileEdit newInstance(String param1, String param2) {
-        FragmentProfileEdit fragment = new FragmentProfileEdit();
+    public static FragmentHomeHelp newInstance() {
+        FragmentHomeHelp fragment = new FragmentHomeHelp();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -31,7 +31,7 @@ public class FragmentProfileEdit extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_edit, container, false);
+        return inflater.inflate(R.layout.fragment_home_help, container, false);
     }
 
     // This event is triggered soon after onCreateView().
@@ -42,12 +42,12 @@ public class FragmentProfileEdit extends Fragment {
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
         Toolbar tb = (Toolbar)   getActivity().findViewById(R.id.toolbar);
         tb.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
-        tb.setTitle("Profil - Edit");
+        tb.setTitle("Help");
         tb.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentProfile.class, null)
+                        .replace(R.id.fragmentContainerView, FragmentHome.class, null)
                         .setReorderingAllowed(true)
                         .commit();
             }

@@ -78,20 +78,17 @@ public class FragmentHome extends Fragment{
             }
         });
 
-        // TODO: 31/10/22 Create Help Layout and Implement To Call It
-//        LinearLayout btnHelp = (LinearLayout) getActivity().findViewById(R.id.btnHomeHelp);
-//        btnHelp.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//                bnv = getActivity().findViewById(R.id.botNav);
-//                bnv.setSelectedItemId(R.id.mLansia);
-//                getParentFragmentManager().beginTransaction()
-//                        .replace(R.id.fragmentContainerView, FragmentLansia.class, null)
-//                        .setReorderingAllowed(true)
-//                        .addToBackStack(null)
-//                        .commit();
-//            }
-//        });
+        LinearLayout btnHelp = (LinearLayout) getActivity().findViewById(R.id.btnHomeHelp);
+        btnHelp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentHomeHelp.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
     }
 
 }

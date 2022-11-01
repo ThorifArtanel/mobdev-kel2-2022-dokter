@@ -55,5 +55,17 @@ public class FragmentProfile extends Fragment {
                         .commit();
             }
         });
+
+        Button btnProfileEdit = (Button) getActivity().findViewById(R.id.btnEditProfile);
+        btnProfileEdit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentProfileEdit.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
     }
 }
